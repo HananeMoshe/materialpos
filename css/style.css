@@ -1,0 +1,284 @@
+.placeholder {
+  position: relative;
+  background: #ccc;
+  z-index: 1;
+  width: 230px;
+  text-align: center;
+  height: 230px;
+}
+.placeholder span {
+  box-shadow: 0 0 2px 0 #ccc inset;
+  position: relative;
+  height: 230px;
+  width: 230px;
+  display: block;
+  font-size: 12px;
+  color: #000;
+  line-height: 230px;
+  text-align: center;
+  z-index: 2;
+}
+.placeholder span:after {
+  position: absolute;
+  top: 6px;
+  left: 3px;
+  content: " ";
+  width: 0;
+  height: 0;
+  border-top: 109px solid transparent;
+  border-bottom: 109px solid transparent;
+  border-left: 109px solid #c0c0c0;
+  z-index: -1;
+}
+.placeholder span:before {
+  position: absolute;
+  top: 6px;
+  right: 3px;
+  content: " ";
+  width: 0;
+  height: 0;
+  border-top: 109px solid transparent;
+  border-bottom: 109px solid transparent;
+  border-right: 109px solid #c0c0c0;
+  z-index: -1;
+}
+.placeholder:after {
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  content: " ";
+  width: 0;
+  height: 0;
+  border-left: 109px solid transparent;
+  border-right: 109px solid transparent;
+  border-top: 109px solid #c0c0c0;
+  z-index: -1;
+}
+.placeholder:before {
+  position: absolute;
+  left: 6px;
+  bottom: 3px;
+  content: " ";
+  width: 0;
+  height: 0;
+  border-left: 109px solid transparent;
+  border-right: 109px solid transparent;
+  border-bottom: 109px solid #c0c0c0;
+  z-index: -1;
+}
+
+.longer {
+  position: relative;
+  background: #0f0;
+  z-index: 1;
+  width: 660px;
+  text-align: center;
+  height: 230px;
+}
+.longer span {
+  box-shadow: 0 0 2px 0 #0f0 inset;
+  position: relative;
+  height: 230px;
+  width: 660px;
+  display: block;
+  font-size: 12px;
+  color: #000;
+  line-height: 230px;
+  text-align: center;
+  z-index: 2;
+}
+.longer span:after {
+  position: absolute;
+  top: 8px;
+  left: 4px;
+  content: " ";
+  width: 0;
+  height: 0;
+  border-top: 107px solid transparent;
+  border-bottom: 107px solid transparent;
+  border-left: 322px solid #ff0;
+  z-index: -1;
+}
+.longer span:before {
+  position: absolute;
+  top: 8px;
+  right: 4px;
+  content: " ";
+  width: 0;
+  height: 0;
+  border-top: 107px solid transparent;
+  border-bottom: 107px solid transparent;
+  border-right: 322px solid #ff0;
+  z-index: -1;
+}
+.longer:after {
+  position: absolute;
+  top: 4px;
+  left: 8px;
+  content: " ";
+  width: 0;
+  height: 0;
+  border-left: 322px solid transparent;
+  border-right: 322px solid transparent;
+  border-top: 107px solid #ff0;
+  z-index: -1;
+}
+.longer:before {
+  position: absolute;
+  left: 8px;
+  bottom: 4px;
+  content: " ";
+  width: 0;
+  height: 0;
+  border-left: 322px solid transparent;
+  border-right: 322px solid transparent;
+  border-bottom: 107px solid #ff0;
+  z-index: -1;
+}
+
+.placeholder {
+@include placeholder;
+}
+.longer {
+@include placeholder(660px, 230px,#0f0,#ff0, 4px);
+}
+html, body {
+  width: 100%;
+}
+
+
+
+
+
+.demo-body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* A simple menu button. */
+.demo-menu {
+  background: none;
+  border: none;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  color: #FFF;
+  box-sizing: border-box;
+}
+
+.pos-main {
+
+}
+.center {
+  text:center;
+}
+main.pos-main .mdl-tabs__tab-bar {
+  justify-content: flex-start;
+  height: 80px;
+}
+main.pos-main .mdl-tabs__tab {
+  justify-content: flex-start;
+  height: 80px;
+  padding-right:35px;
+  margin: 0 5px;
+  border-radius: 10px 10px 0 0;
+  font-size: 1.25em;
+  font-weight:500;
+}
+main.pos-main .mdl-tabs__tab .mdc-button {
+  padding: 0 4px;
+  height:100%;
+
+  font-size:1.25em;
+  font-weight:500;
+}
+main.pos-main table.mdldata-table {
+   width:80%;
+   margin:auto;
+   text-align: center;
+
+ }
+main.pos-main .mdc-permanent-drawer .mdc-list-group {
+
+  text-align: center;
+
+}
+main.pos-main .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active:after {
+  background:orange;
+}
+.demo-content .mdc-permanent-drawer {
+  right: 0;
+  border: 5px ridge #e4e4e4;
+  float: right;
+  width:100%
+}
+main.pos-main .mdc-permanent-drawer table.mdl-data-table {
+  width:90%;
+  margin:auto;
+  text-align: center;
+ border:none;
+  font-size:18px;
+}
+main.pos-main .mdc-permanent-drawer table.mdl-data-table td {
+  border:none;
+}
+
+main.pos-main .mdc-permanent-drawer table.mdl-data-table th {
+  font-size:20px;
+  border-bottom: 1px solid rgba(0,0,0,.12);
+}
+.grey-bg {
+  background: rgba(0, 0, 0, .15);
+}
+section ul.mdc-list li.mdc-list-item {
+  font-size:1.5em;
+}
+section ul.mdc-list li.mdc-list-item .mdc-list-item__end-detail {
+  width:auto;
+}
+fieldset button.mdc-button--raised.mdc-button {
+  margin:15px;
+  height:150px;
+  width:35%;
+  font-size: 28px;
+}
+section.mdc-card__actions button.mdc-button--raised.mdc-button{
+  min-width:20%;
+  height:48px;
+  padding: 0 20px;
+  font-size: 18px;
+}
+.demo-card__16-9-media {
+  background-image: url("images/16-9.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 12.313rem; /* 197sp, for 16:9 ratio with 350sp demo card width */
+}
+
+.demo-card {
+  max-width: 21.875rem; /* 350sp */
+  margin-bottom: 48px;
+}
+@media(min-width: 768px) {
+  .demo-card {
+    margin-bottom: 24px;
+  }
+}
+@media(max-width: 768px) {
+  main.pos-main .mdl-tabs__tab {
+    justify-content: flex-start;
+    height: 48px;
+    padding:0 5% 0 1%;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+    font-size: .95em;
+    font-weight:500;
+    line-height: normal;
+  }
+  main.pos-main .mdl-tabs__tab-bar {
+    justify-content: flex-start;
+    height: 48px;
+  }
+}
