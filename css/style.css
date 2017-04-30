@@ -266,7 +266,13 @@ section.mdc-card__actions button.mdc-button--raised.mdc-button{
     margin-bottom: 24px;
   }
 }
-@media(max-width: 768px) {
+@media(max-width: 1024px) {
+  main.pos-main .mdc-layout-grid__cell--span-4 {
+    grid-column-end:span 12;
+  }
+  main.pos-main .mdc-layout-grid__cell--span-8 {
+    grid-column-end:span 12;
+  }
   main.pos-main .mdl-tabs__tab {
     justify-content: flex-start;
     height: 48px;
